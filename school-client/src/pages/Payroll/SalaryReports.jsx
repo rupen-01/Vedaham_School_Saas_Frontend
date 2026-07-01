@@ -1,0 +1,1 @@
+export default function SalaryReports(){return <div>SalaryReports</div>}

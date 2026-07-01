@@ -1,0 +1,51 @@
+/**
+ * useApi - Custom hook to handle API calls with React Query and Axios
+ *
+ * ✅ Supported Methods:
+ *   - GET    → Data fetch with useQuery
+ *   - POST   → Create new data with useMutation
+ *   - PATCH  → Update existing data with useMutation
+ *   - DELETE → Remove data with useMutation
+ *
+ * 📌 Parameters:
+ * @param {string} key         - Unique query/mutation key for caching
+ * @param {string} url         - API endpoint (relative to BaseUrl)
+ * @param {string} method      - HTTP method ('GET', 'POST', 'PATCH', 'DELETE')
+ * @param {boolean} requireAuth - If true, adds Bearer token from cookies
+ * @param {boolean} multiPart  - If true, sends multipart/form-data (for file uploads)
+ * @param {object} options     - Extra options for React Query
+ *
+ * 📌 Usage Examples:
+ * -------------------------------------------------------------------------
+ * // 1. GET Example
+ * const { data, isLoading, error } = useApi({
+ *   key: "users",
+ *   url: "/users",
+ *   method: "GET"
+ * });
+ *
+ * // 2. POST Example
+ * const createUser = useApi({
+ *   key: "createUser",
+ *   url: "/users",
+ *   method: "POST"
+ * });
+ * createUser.mutate({ payload: { name: "John", email: "john@mail.com" } });
+ *
+ * // 3. PATCH Example
+ * const updateUser = useApi({
+ *   key: "updateUser",
+ *   url: "/users",
+ *   method: "PATCH"
+ * });
+ * updateUser.mutate({ id: 123, payload: { name: "Updated Name" } });
+ *
+ * // 4. DELETE Example
+ * const deleteUser = useApi({
+ *   key: "deleteUser",
+ *   url: "/users",
+ *   method: "DELETE"
+ * });
+ * deleteUser.mutate({ id: 123 });
+ * -------------------------------------------------------------------------
+ */

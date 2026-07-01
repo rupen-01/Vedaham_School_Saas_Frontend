@@ -1,0 +1,46 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "admin": "cd saas-panel && npm run dev",
+    "admin:staging": "cd saas-panel && npm run dev:staging",
+    "admin:production": "cd saas-panel && npm run dev:production",
+    "school": "cd school-client && npm run dev",
+    "school:staging": "cd school-client && npm run dev:staging",
+    "school:production": "cd school-client && npm run dev:production",
+    "init": "cd school-client && npm i && cd ../saas-panel && npm i",
+    "build:admin": "cd saas-panel && npm run build",
+    "build:admin:staging": "cd saas-panel && npm run build:staging",
+    "build:admin:production": "cd saas-panel && npm run build:production",
+    "build:school": "cd school-client && npm run build",
+    "build:school:staging": "cd school-client && npm run build:staging",
+    "build:school:production": "cd school-client && npm run build:production",
+    "preview:admin": "cd saas-panel && npm run preview",
+    "preview:admin:staging": "cd saas-panel && npm run preview:staging",
+    "preview:admin:production": "cd saas-panel && npm run preview:production",
+    "preview:school": "cd school-client && npm run preview",
+    "preview:school:staging": "cd school-panel && npm run preview:staging",
+    "preview:school:production": "cd school-panel && npm run preview:production",
+    "build:all": "npm run build:saas && npm run build:school",
+    "build:all:staging": "npm run build:saas:staging && npm run build:school:staging",
+    "build:all:production": "npm run build:saas:production && npm run build:school:production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Indie-Devlopers/school-saas-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Indie-Devlopers/school-saas-frontend/issues"
+  },
+  "homepage": "https://github.com/Indie-Devlopers/school-saas-frontend#readme",
+  "description": "",
+  "dependencies": {
+    "@mui/material": "^7.2.0",
+    "apexcharts": "^5.3.1",
+    "react-apexcharts": "^1.7.0",
+    "react-calendar": "^6.0.0"
+  }
+}

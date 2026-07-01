@@ -1,0 +1,1 @@
+export default function HealthReport() { return (<div>HealthReport</div>); }
