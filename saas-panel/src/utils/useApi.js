@@ -71,6 +71,7 @@ export const useMutationApi = ({
       try {
         let requestedUrl = id ? `${url}/${id}` : url;
 
+          
         switch (method) {
           case "POST":
             return (await api.post(requestedUrl, payload, { headers: getHeader({ requireAuth, multiPart }) })).data;

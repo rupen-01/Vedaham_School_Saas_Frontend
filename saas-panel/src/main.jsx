@@ -5,9 +5,6 @@ import App from './App.jsx'
 import { ColorThemeProvider } from "./context/context.jsx";
 import { Toaster } from 'react-hot-toast';
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';

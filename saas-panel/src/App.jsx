@@ -143,7 +143,7 @@ function Applayout(){
       className="flex"
     >
       {(ismobile || (activeNavStyle !== "nav-top")) && <Sidebar activeNavStyle={activeNavStyle} isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />}
-      <div className={`flex-1 transition-all ${activeNavStyle !== "nav-top" ? isCollapsed ? "lg:ml-20" : "lg:ml-[288px]" : ""}`}>
+      <div className={`flex-1 min-w-0 transition-all ${activeNavStyle !== "nav-top" ? isCollapsed ? "lg:ml-20" : "lg:ml-[288px]" : ""}`}>
         <Header setIsCollapsed={setIsCollapsed} activeNavColor={activeNavColor} activeNavStyle={activeNavStyle}/>
         {activeNavStyle === "nav-top" && <Navbar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />}
         <div className={`overflow-y-auto h-[90dvh] px-2 sm:px-5 py-2 md:py-[8px]  bg-gray-100 pb-10 ${isCollapsed ? (location?.pathname === "/")?"lg:px-10" : "lg:px-14 xl:px-32" : "lg:px-10"}`}>

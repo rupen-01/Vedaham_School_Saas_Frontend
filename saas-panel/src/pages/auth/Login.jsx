@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Mail, Lock, Shield } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom"
-import axios from 'axios';
 import ApiConfig from '../../config/ApiConfig';
 import Cookies from "js-cookie";
 import { KeyCofig } from '../../config/KeyConfig';
 import CryptoJS from "crypto-js";
 import { DecryptUser } from '../../utils/decryptUser';
 import { useMutationApi } from '../../utils/useApi';
-import { queryClient } from '../../main';
 import Pop from '../../components/common/pop';
 
 const Login = () => {

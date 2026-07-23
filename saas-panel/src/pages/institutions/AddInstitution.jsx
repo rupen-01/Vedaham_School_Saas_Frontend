@@ -21,7 +21,7 @@ export default function AddInstitution() {
     // Single variable to handle all edit mode logic
   const isEditing = isEditMode;
     // Fetch plan data when in edit mode
-  const { data: instituteDataFromApi, isLoading: instituteLoading, error: instituteError } = useGetApi({
+  const { data: instituteDataFromApi } = useGetApi({
     key: "institutes"+institutionId,
     url: `/school/${institutionId}`,
     requireAuth: true,
@@ -108,9 +108,8 @@ const [instituteData, setInstituteData] = useState(initialInstituteData);
 
   const {
     data: plansData,
-    plansLoading,
-    plansError,
-    refetch,
+    isLoading: plansLoading,
+    error: plansError,
   } = useGetApi({
     key: "plans",
     url: ApiConfig.PLAN_GET_ALL,
