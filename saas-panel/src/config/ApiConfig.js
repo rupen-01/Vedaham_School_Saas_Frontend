@@ -43,7 +43,12 @@ const ApiConfig = {
     SCHOOL_UPDATE_IMAGE: "/school/image", // ID handled in hook
     SCHOOL_UPDATE: "/school",             // ID handled in hook
     SCHOOL_DELETE: "/school",             // ID handled in hook
-    SCHOOL_GET_BY_ID: "/school"           // ID handled in hook
+    SCHOOL_GET_BY_ID: "/school",          // ID handled in hook
+
+    // =========================
+    // DASHBOARD ROUTES
+    // =========================
+    PLAN_ANALYTICS: "/plan-analytics",
 
 };
 
